@@ -7,9 +7,9 @@
 #define Index uint16_t
 #define Path uint64_t
 #define History uint64_t
-#define TAGE_BIMODAL_TABLE_SIZE 16384 * 8 // gives size of bimodal 32 KB
-#define TAGE_MAX_INDEX_BITS 12            // for 5 components, size increase to 64 KB
-#define TAGE_NUM_COMPONENTS 8             // TODO
+#define TAGE_BIMODAL_TABLE_SIZE 131072 // gives size of bimodal 16 KB
+#define TAGE_MAX_INDEX_BITS 13         // 20KB for each component
+#define TAGE_NUM_COMPONENTS 5          // TODO
 #define TAGE_BASE_COUNTER_BITS 2
 #define TAGE_COUNTER_BITS 3
 #define TAGE_USEFUL_BITS 2
@@ -19,8 +19,8 @@
 #define TAGE_HISTORY_ALPHA 2
 #define TAGE_RESET_USEFUL_INTERVAL 512000
 
-const uint8_t TAGE_INDEX_BITS[TAGE_NUM_COMPONENTS] = {10, 10, 10, 10, 10, 10, 10, 10};
-const uint8_t TAGE_TAG_BITS[TAGE_NUM_COMPONENTS] = {8, 8, 8, 8, 8, 8, 8, 8};
+const uint8_t TAGE_INDEX_BITS[TAGE_NUM_COMPONENTS] = {13, 13, 13, 13, 13};
+const uint8_t TAGE_TAG_BITS[TAGE_NUM_COMPONENTS] = {8, 8, 8, 8, 8};
 
 struct tage_predictor_table_entry {
   uint8_t ctr;    // The counter on which prediction is based Range - 0-7
