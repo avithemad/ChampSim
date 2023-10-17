@@ -8,9 +8,10 @@
 
 namespace
 {
-constexpr std::size_t GLOBAL_HISTORY_LENGTH = 10;
-constexpr std::size_t COUNTER_BITS = 20;
-constexpr std::size_t GS_HISTORY_TABLE_SIZE = 16384;
+constexpr std::size_t GLOBAL_HISTORY_LENGTH = 18;
+constexpr std::size_t COUNTER_BITS = 4;
+constexpr std::size_t GS_HISTORY_TABLE_SIZE = 262144;
+// 20bits=2.5bytes budget = 2^14 * 2.5 B approx 32KB
 
 std::map<O3_CPU*, std::bitset<GLOBAL_HISTORY_LENGTH>> branch_history_vector;
 std::map<O3_CPU*, std::array<champsim::msl::fwcounter<COUNTER_BITS>, GS_HISTORY_TABLE_SIZE>> gs_history_table;

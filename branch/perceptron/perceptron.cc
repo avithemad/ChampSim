@@ -87,9 +87,9 @@ public:
   }
 };
 
-constexpr std::size_t PERCEPTRON_HISTORY = 130; // history length for the global history shift register
-constexpr std::size_t PERCEPTRON_BITS = 8;      // number of bits per weight
-constexpr std::size_t NUM_PERCEPTRONS = 1000;
+constexpr std::size_t PERCEPTRON_HISTORY = 260; // history length for the global history shift register
+constexpr std::size_t PERCEPTRON_BITS = 16;     // number of bits per weight
+constexpr std::size_t NUM_PERCEPTRONS = 250;
 
 constexpr std::size_t NUM_UPDATE_ENTRIES = 100; // size of buffer for keeping 'perceptron_state' for update
 

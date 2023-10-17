@@ -5,8 +5,8 @@
 
 namespace
 {
-constexpr std::size_t BIMODAL_TABLE_SIZE = 16384;
-constexpr std::size_t BIMODAL_PRIME = 16381;
+constexpr std::size_t BIMODAL_TABLE_SIZE = 65536;
+constexpr std::size_t BIMODAL_PRIME = 65533;
 constexpr std::size_t COUNTER_BITS = 2;
 
 std::map<O3_CPU*, std::array<champsim::msl::fwcounter<COUNTER_BITS>, BIMODAL_TABLE_SIZE>> bimodal_table;
